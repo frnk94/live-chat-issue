@@ -42,11 +42,6 @@ class LiveChat extends EventEmitter {
 		window.LC_API.on_chat_ended = () => {
 			this.onChatEnded();
 		};
-
-		// Starting LC
-		var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-		lc.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
 	}
 	onBeforeLoad() {
 		this.api = window.LC_API;
